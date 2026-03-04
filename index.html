@@ -1,42 +1,501 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My Portfolio</title>
-<style>
-
-body{
-font-family: Arial;
-background:#0f172a;
-color:white;
-text-align:center;
-margin-top:100px;
-}
-
-h1{
-color:#38bdf8;
-}
-
-a{
-color:#22c55e;
-}
-
-</style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hariharasudhan P — AI Engineer & CV Specialist</title>
+  <meta name="description" content="AI Engineer specializing in Computer Vision and Edge AI. Open to internship opportunities in deep learning, embedded AI, and computer vision."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
 
-<h1>Hello, I'm Captain</h1>
-<p>Computer & Communication Engineering Student</p>
+<!-- CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-trail"></div>
 
-<h2>Projects</h2>
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span class="mono">hari@ai</span><span class="accent">:~$</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#github">github</a></li>
+      <li><a href="#contact" class="nav-hire">Open to Internships →</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-<p>Fake Currency Detector</p>
-<p>CO2 Prediction Model</p>
-<p>Maze Solver Robot</p>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#about" class="mob-link">about</a></li>
+    <li><a href="#skills" class="mob-link">skills</a></li>
+    <li><a href="#projects" class="mob-link">projects</a></li>
+    <li><a href="#github" class="mob-link">github</a></li>
+    <li><a href="#contact" class="mob-link mob-hire">Open to Internships →</a></li>
+  </ul>
+</div>
 
-<h2>GitHub</h2>
+<!-- HERO -->
+<section id="hero">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-noise"></div>
 
-<a href="https://github.com/YOURUSERNAME">My GitHub</a>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="pulse-ring"></span>
+        <span class="pulse-dot"></span>
+        <span>Actively seeking internships · 2025</span>
+      </div>
 
+      <h1 class="hero-name">
+        Hariharasudhan P
+      </h1>
+
+      <div class="hero-typewriter">
+        <span class="mono accent" id="typewriter"></span><span class="cursor-blink">|</span>
+      </div>
+
+      <p class="hero-bio">
+        Second-year Computer and Communication Engineer building real-world AI systems — from training vision models to running them on edge hardware with zero cloud dependency. I care about models that <em>actually ship.</em>
+      </p>
+
+      <div class="hero-cta-row">
+        <a href="#contact" class="cta-primary">Hire me for internship</a>
+        <a href="https://github.com/Hari-1410" target="_blank" rel="noopener" class="cta-ghost">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          View GitHub
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-n">3+</span>
+          <span class="stat-l">AI Projects</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat">
+          <span class="stat-n">8.9</span>
+          <span class="stat-l">CGPA</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat">
+          <span class="stat-n">Edge</span>
+          <span class="stat-l">Deployment</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat">
+          <span class="stat-n">CV</span>
+          <span class="stat-l">Specialist</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="terminal-card">
+        <div class="terminal-bar">
+          <span class="t-dot red"></span>
+          <span class="t-dot yellow"></span>
+          <span class="t-dot green"></span>
+          <span class="t-title mono">hari — profile.py</span>
+        </div>
+        <div class="terminal-body">
+          <pre class="code-block"><span class="c-kw">class</span> <span class="c-cls">HariharasudhanP</span>:
+    <span class="c-kw">def</span> <span class="c-fn">__init__</span>(self):
+        self.role     = <span class="c-str">"AI Engineer"</span>
+        self.focus    = [
+            <span class="c-str">"Computer Vision"</span>,
+            <span class="c-str">"Edge AI"</span>,
+            <span class="c-str">"Deep Learning"</span>
+        ]
+        self.stack    = [
+            <span class="c-str">"YOLOv8"</span>, <span class="c-str">"TensorFlow"</span>,
+            <span class="c-str">"OpenCV"</span>, <span class="c-str">"Python"</span>
+        ]
+        self.hardware = <span class="c-str">"Raspberry Pi, Jetson"</span>
+        self.cgpa     = <span class="c-num">8.9</span>
+        self.status   = <span class="c-str">"seeking_internship"</span>
+        self.location = <span class="c-str">"India 🇮🇳"</span>
+
+    <span class="c-kw">def</span> <span class="c-fn">contact</span>(self):
+        <span class="c-kw">return</span> <span class="c-str">"hari14.off@gmail.com"</span></pre>
+        </div>
+      </div>
+
+      <div class="hero-tags-row">
+        <span class="htag">Computer Vision</span>
+        <span class="htag">Edge Deployment</span>
+        <span class="htag">Federated Learning</span>
+        <span class="htag">Object Detection</span>
+        <span class="htag">Time Series</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span>Computer Vision</span><span class="ticker-dot">·</span>
+    <span>Edge AI</span><span class="ticker-dot">·</span>
+    <span>YOLOv8</span><span class="ticker-dot">·</span>
+    <span>Raspberry Pi</span><span class="ticker-dot">·</span>
+    <span>Federated Learning</span><span class="ticker-dot">·</span>
+    <span>TensorFlow</span><span class="ticker-dot">·</span>
+    <span>OpenCV</span><span class="ticker-dot">·</span>
+    <span>CNN · LSTM</span><span class="ticker-dot">·</span>
+    <span>Open to Internships</span><span class="ticker-dot">·</span>
+    <span>Computer Vision</span><span class="ticker-dot">·</span>
+    <span>Edge AI</span><span class="ticker-dot">·</span>
+    <span>YOLOv8</span><span class="ticker-dot">·</span>
+    <span>Raspberry Pi</span><span class="ticker-dot">·</span>
+    <span>Federated Learning</span><span class="ticker-dot">·</span>
+    <span>TensorFlow</span><span class="ticker-dot">·</span>
+    <span>OpenCV</span><span class="ticker-dot">·</span>
+    <span>CNN · LSTM</span><span class="ticker-dot">·</span>
+    <span>Open to Internships</span><span class="ticker-dot">·</span>
+  </div>
+</div>
+
+<!-- ABOUT + SKILLS BENTO -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-eyebrow">
+      <span class="mono">01</span> &mdash; About
+    </div>
+
+    <div class="bento-grid">
+
+      <!-- BIO -->
+      <div class="bento-card bento-bio reveal">
+        <div class="bento-label">Who I am</div>
+        <h2 class="bento-heading">Building AI that<br><em>runs anywhere.</em></h2>
+        <p>I'm a second-year Computer and Communication Engineering student at Amrita Vishwa Vidyapeetham with a CGPA of 8.9. My work lives at the intersection of deep learning research and hardware-constrained deployment.</p>
+        <p>I don't just train models — I compress them, optimize them, and ship them to embedded platforms like Raspberry Pi where GPU compute doesn't exist. That's the hard part most people skip.</p>
+        <p>I'm actively looking for internship roles in AI/ML engineering, computer vision, or edge AI where I can contribute to production systems and learn from senior engineers.</p>
+        <a href="mailto:hari14.off@gmail.com" class="bento-link">hari14.off@gmail.com →</a>
+      </div>
+
+      <!-- INTERNSHIP CALLOUT -->
+      <div class="bento-card bento-hire reveal">
+        <div class="hire-icon">⚡</div>
+        <div class="bento-label">Current status</div>
+        <h3>Open for<br>Internships</h3>
+        <p>Available for 2-3 month internships in AI/ML, Computer Vision, or Edge AI roles. Can start immediately.</p>
+        <ul class="hire-list">
+          <li>✓ AI / ML Engineering</li>
+          <li>✓ Computer Vision</li>
+          <li>✓ Embedded AI / Edge</li>
+          <li>✓ Research Roles</li>
+        </ul>
+        <a href="mailto:hari14.off@gmail.com" class="cta-primary" style="display:inline-block;margin-top:auto">Contact me →</a>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="bento-card bento-edu reveal">
+        <div class="bento-label">Education</div>
+        <div class="edu-logo">AVV</div>
+        <div class="edu-name">Amrita Vishwa Vidyapeetham</div>
+        <div class="edu-degree">B.Tech · Computer & Communication Engineering</div>
+        <div class="edu-gpa-row">
+          <span class="gpa-big">8.9</span>
+          <span class="gpa-sub">/ 10 CGPA</span>
+        </div>
+        <div class="edu-bar-wrap">
+          <div class="edu-bar" style="width:89%"></div>
+        </div>
+        <div class="mono" style="font-size:.65rem;color:var(--muted);margin-top:6px;">Expected graduation · 2025</div>
+      </div>
+
+      <!-- QUICK FACTS -->
+      <div class="bento-card bento-facts reveal">
+        <div class="bento-label">Quick facts</div>
+        <div class="fact-grid">
+          <div class="fact"><span class="fact-icon">📍</span><div><span class="fact-k">Location</span><span class="fact-v">India</span></div></div>
+          <div class="fact"><span class="fact-icon">🎯</span><div><span class="fact-k">Speciality</span><span class="fact-v">Edge AI + CV</span></div></div>
+          <div class="fact"><span class="fact-icon">🔧</span><div><span class="fact-k">Hardware</span><span class="fact-v">Raspberry Pi, Jetson</span></div></div>
+          <div class="fact"><span class="fact-icon">📊</span><div><span class="fact-k">Experience</span><span class="fact-v">3 AI Projects</span></div></div>
+          <div class="fact"><span class="fact-icon">⚡</span><div><span class="fact-k">Languages</span><span class="fact-v">Python, C</span></div></div>
+          <div class="fact"><span class="fact-icon">🚀</span><div><span class="fact-k">Seeking</span><span class="fact-v">Internship 2025</span></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section section-dark">
+  <div class="container">
+    <div class="section-eyebrow"><span class="mono">02</span> &mdash; Skills &amp; Stack</div>
+    <div class="skills-layout reveal">
+      <div class="skills-intro">
+        <h2 class="section-h2">Tools I build<br><em>real systems with.</em></h2>
+        <p class="skills-sub">Each skill has a real project behind it — not just tutorials.</p>
+      </div>
+      <div class="skills-categories">
+
+        <div class="skill-cat">
+          <div class="skill-cat-label">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="var(--accent)" stroke-width="1.5"/></svg>
+            Languages
+          </div>
+          <div class="skill-tags">
+            <span class="stag stag-hot">Python</span>
+            <span class="stag">C</span>
+          </div>
+        </div>
+
+        <div class="skill-cat">
+          <div class="skill-cat-label">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="var(--accent)" stroke-width="1.5"/></svg>
+            Vision & Detection
+          </div>
+          <div class="skill-tags">
+            <span class="stag stag-hot">YOLOv5</span>
+            <span class="stag stag-hot">YOLOv8</span>
+            <span class="stag stag-hot">OpenCV</span>
+          </div>
+        </div>
+
+        <div class="skill-cat">
+          <div class="skill-cat-label">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="var(--accent)" stroke-width="1.5"/></svg>
+            Deep Learning
+          </div>
+          <div class="skill-tags">
+            <span class="stag stag-hot">TensorFlow</span>
+            <span class="stag">CNN</span>
+            <span class="stag">LSTM</span>
+          </div>
+        </div>
+
+        <div class="skill-cat">
+          <div class="skill-cat-label">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="var(--accent)" stroke-width="1.5"/></svg>
+            Distributed AI
+          </div>
+          <div class="skill-tags">
+            <span class="stag">Federated Learning</span>
+            <span class="stag">IDS</span>
+          </div>
+        </div>
+
+        <div class="skill-cat">
+          <div class="skill-cat-label">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="var(--accent)" stroke-width="1.5"/></svg>
+            Hardware & Tools
+          </div>
+          <div class="skill-tags">
+            <span class="stag">Raspberry Pi</span>
+            <span class="stag">Git</span>
+            <span class="stag">Linux</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PROFICIENCY BARS -->
+    <div class="prof-bars reveal">
+      <div class="prof-row">
+        <span class="prof-label">Computer Vision</span>
+        <div class="prof-track"><div class="prof-fill" data-w="88"></div></div>
+        <span class="prof-pct">88%</span>
+      </div>
+      <div class="prof-row">
+        <span class="prof-label">Python / TensorFlow</span>
+        <div class="prof-track"><div class="prof-fill" data-w="85"></div></div>
+        <span class="prof-pct">85%</span>
+      </div>
+      <div class="prof-row">
+        <span class="prof-label">Edge Deployment</span>
+        <div class="prof-track"><div class="prof-fill" data-w="80"></div></div>
+        <span class="prof-pct">80%</span>
+      </div>
+      <div class="prof-row">
+        <span class="prof-label">Deep Learning Architectures</span>
+        <div class="prof-track"><div class="prof-fill" data-w="82"></div></div>
+        <span class="prof-pct">82%</span>
+      </div>
+      <div class="prof-row">
+        <span class="prof-label">Federated / Distributed ML</span>
+        <div class="prof-track"><div class="prof-fill" data-w="72"></div></div>
+        <span class="prof-pct">72%</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-eyebrow"><span class="mono">03</span> &mdash; Projects</div>
+    <div class="projects-header">
+      <h2 class="section-h2">What I've<br><em>shipped.</em></h2>
+      <p class="projects-sub">Each project solves a real problem — not a toy dataset.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="proj-card reveal" data-title="Pothole Detection System" data-desc="Real-time pothole detection pipeline trained with YOLOv5 and deployed on a Raspberry Pi for fully on-device inference. The system processes live camera feed, identifies road damage, and works without any network connection. Optimized the model weights for low-latency execution on ARM hardware — no GPU, no cloud." data-tech="YOLOv5 · OpenCV · Raspberry Pi · Python · ARM optimization">
+        <div class="proj-num">01</div>
+        <div class="proj-type">Computer Vision · Edge AI</div>
+        <h3 class="proj-title">Pothole Detection<br>System</h3>
+        <p class="proj-desc">YOLOv5-powered real-time detection on Raspberry Pi. Fully offline edge inference with no cloud dependency — optimized for ARM.</p>
+        <div class="proj-footer">
+          <div class="proj-stack">
+            <span>YOLOv5</span>
+            <span>OpenCV</span>
+            <span>RPi</span>
+          </div>
+          <button class="proj-btn">Details →</button>
+        </div>
+        <div class="proj-glow"></div>
+      </div>
+
+      <div class="proj-card reveal" data-title="CO₂ Prediction Model" data-desc="Hybrid CNN-LSTM architecture designed to forecast indoor CO₂ concentrations from historical sensor readings. The CNN layers extract local spatial features from the time-series window while LSTM layers capture long-range temporal dependencies. Trained on real indoor air quality datasets, achieving high accuracy on multi-step ahead predictions." data-tech="TensorFlow · CNN · LSTM · Python · Time-series forecasting">
+        <div class="proj-num">02</div>
+        <div class="proj-type">Deep Learning · Forecasting</div>
+        <h3 class="proj-title">CO₂ Prediction<br>Model</h3>
+        <p class="proj-desc">CNN-LSTM hybrid architecture forecasting indoor air quality from sensor streams. Multi-step temporal prediction with real-world data.</p>
+        <div class="proj-footer">
+          <div class="proj-stack">
+            <span>TensorFlow</span>
+            <span>CNN</span>
+            <span>LSTM</span>
+          </div>
+          <button class="proj-btn">Details →</button>
+        </div>
+        <div class="proj-glow"></div>
+      </div>
+
+      <div class="proj-card reveal" data-title="Federated Intrusion Detection System" data-desc="Distributed machine learning system for detecting DoS (Denial of Service) attacks in automotive Controller Area Network (CAN) bus traffic. Uses federated learning to train a shared detection model across multiple simulated ECU nodes — without ever centralising raw network data. Preserves privacy while achieving competitive detection accuracy against centralised baselines." data-tech="Federated Learning · Python · CAN Bus · Network Security · Privacy-preserving ML">
+        <div class="proj-num">03</div>
+        <div class="proj-type">Federated Learning · Security</div>
+        <h3 class="proj-title">Federated Intrusion<br>Detection System</h3>
+        <p class="proj-desc">Privacy-preserving distributed ML for automotive DoS detection on CAN bus. Trains across decentralised ECU nodes without sharing raw network data.</p>
+        <div class="proj-footer">
+          <div class="proj-stack">
+            <span>Federated</span>
+            <span>Python</span>
+            <span>IDS</span>
+          </div>
+          <button class="proj-btn">Details →</button>
+        </div>
+        <div class="proj-glow"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GITHUB -->
+<section id="github" class="section section-dark">
+  <div class="container">
+    <div class="section-eyebrow"><span class="mono">04</span> &mdash; GitHub</div>
+    <div class="github-top">
+      <h2 class="section-h2">Open source<br><em>activity.</em></h2>
+      <a href="https://github.com/Hari-1410" target="_blank" rel="noopener" class="gh-profile-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        @Hari-1410
+      </a>
+    </div>
+    <div id="repoContainer" class="repo-grid reveal">
+      <div class="repo-skel"></div><div class="repo-skel"></div>
+      <div class="repo-skel"></div><div class="repo-skel"></div>
+      <div class="repo-skel"></div><div class="repo-skel"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="contact-inner reveal">
+      <div class="contact-left">
+        <div class="section-eyebrow" style="margin-bottom:16px;"><span class="mono">05</span> &mdash; Contact</div>
+        <h2 class="contact-h">Let's build<br><em>something.</em></h2>
+        <p class="contact-p">I'm actively looking for internship opportunities in AI/ML, Computer Vision, or Edge AI. If you're hiring or know someone who is, I'd love to connect.</p>
+        <div class="contact-links">
+          <a href="mailto:hari14.off@gmail.com" class="contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            hari14.off@gmail.com
+          </a>
+          <a href="https://github.com/Hari-1410" target="_blank" rel="noopener" class="contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            github.com/Hari-1410
+          </a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <div class="avail-card">
+          <div class="avail-header">
+            <span class="avail-dot"></span>
+            <span class="mono" style="font-size:.7rem;color:var(--accent)">AVAILABLE NOW</span>
+          </div>
+          <div class="avail-role">AI / ML Intern</div>
+          <div class="avail-details">
+            <div class="avail-row"><span>Duration</span><span>2-3 months</span></div>
+            <div class="avail-row"><span>Mode</span><span>Remote / On-site</span></div>
+            <div class="avail-row"><span>Start</span><span>Immediately</span></div>
+            <div class="avail-row"><span>Domains</span><span>CV · Edge AI · DL</span></div>
+          </div>
+          <a href="mailto:hari14.off@gmail.com" class="cta-primary" style="width:100%;justify-content:center;display:flex">Send an email →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <span class="mono footer-logo">hari@ai<span class="accent">:~$</span></span>
+      <span style="color:var(--muted);font-size:.78rem;">Hariharasudhan P · AI Engineer · India</span>
+      <div class="footer-links">
+        <a href="https://github.com/Hari-1410" target="_blank">GitHub</a>
+        <a href="mailto:hari14.off@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="backToTop" aria-label="Back to top">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- PROJECT MODAL -->
+<div id="projectModal">
+  <div class="modal-bg"></div>
+  <div class="modal-box">
+    <button id="closeModal">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="modal-eyebrow mono">Project details</div>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDesc"></p>
+    <div class="modal-stack-wrap">
+      <div class="mono" style="font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;">Stack</div>
+      <p id="modalTech" class="mono"></p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
